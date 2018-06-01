@@ -175,12 +175,12 @@ namespace Crew
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NW1.saveWeight("w1.txt");
+            NW1.saveWeight("weight\\w1.txt");
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            NW2.saveWeight("w2.txt");
+            NW2.saveWeight("weight\\w2.txt");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace Crew
 
         private void button9_Click(object sender, EventArgs e)
         {
-            NW3.saveWeight("w3.txt");
+            NW3.saveWeight("weight\\w3.txt");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -374,9 +374,9 @@ namespace Crew
             pictureBox3.Image = bmp3;
             pictureBox4.Image = bmp4;
 
-            NW1 = new Web(width, height, "w1.txt");
-            NW2 = new Web(width, height, "w2.txt");
-            NW3 = new Web(width, height, "w3.txt");
+            NW1 = new Web(width, height, "weight\\w1.txt");
+            NW2 = new Web(width, height, "weight\\w2.txt");
+            NW3 = new Web(width, height, "weight\\w3.txt");
 
 
         }
@@ -390,8 +390,5 @@ namespace Crew
                 }
             }
         }
-
-       
-
     }
 }
