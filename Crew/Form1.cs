@@ -97,10 +97,10 @@ namespace Crew
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[,] inp = new int[pictureBox1.Width, pictureBox1.Height];
-            for (int x = 0; x < pictureBox1.Width; x++)
+            int[,] inp = new int[width, height];
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < pictureBox1.Height; y++)
+                for (int y = 0; y < height; y++)
                 {
                     int n = (bmp1.GetPixel(x, y).R);
                     if (n >= 250)
@@ -131,10 +131,10 @@ namespace Crew
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int[,] inp = new int[pictureBox2.Width, pictureBox2.Height];
-            for (int x = 0; x < pictureBox2.Width; x++)
+            int[,] inp = new int[width, height];
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < pictureBox2.Height; y++)
+                for (int y = 0; y < height; y++)
                 {
                     int n = (bmp2.GetPixel(x, y).R);
                     if (n >= 250)
@@ -210,10 +210,10 @@ namespace Crew
 
         private void button7_Click(object sender, EventArgs e)
         {
-            int[,] inp = new int[pictureBox3.Width, pictureBox3.Height];
-            for (int x = 0; x < pictureBox3.Width; x++)
+            int[,] inp = new int[width, height];
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < pictureBox3.Height; y++)
+                for (int y = 0; y < height; y++)
                 {
                     int n = (bmp3.GetPixel(x, y).R);
                     if (n >= 250)
