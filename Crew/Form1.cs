@@ -26,6 +26,14 @@ namespace Crew
         /// Секунд перед очситкой
         /// </summary>
         int delTime;
+        /// <summary>
+        /// булевая строка
+        /// </summary>
+        int[] boolString;
+        /// <summary>
+        /// вектор цифр
+        /// </summary>
+        int[] digitVec;
 
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
@@ -83,6 +91,7 @@ namespace Crew
                 timer4.Stop();
                 clearBMP(ref bmp4);
                 pictureBox4.Image = bmp4;
+                richTextBox1.Text = "";
             }
         }
 
@@ -235,6 +244,70 @@ namespace Crew
 
         private void button10_Click(object sender, EventArgs e)
         {
+            int[,] inp = new int[width, height];
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    int n = (bmp4.GetPixel(x, y).R);
+                    if (n >= 250)
+                        n = 0;
+                    else
+                        n = 1;
+                    inp[x, y] = n;
+                }
+            }
+            NW1.input = inp;
+            NW2.input = inp;
+            NW3.input = inp;
+
+            //Распознавание1
+
+            NW1.mul_w();
+            NW1.Sum();
+            boolString[0] = NW1.Rez() ? 1 : 0;
+
+            //Распознавание2
+
+            NW2.mul_w();
+            NW2.Sum();
+            boolString[1] = NW2.Rez() ? 1 : 0;
+
+            //Распознавание3
+
+            NW3.mul_w();
+            NW3.Sum();
+            boolString[2] = NW3.Rez() ? 1 : 0;
+
+            int sum = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                sum += boolString[i] * digitVec[i];
+            }
+            
+            switch (sum)
+            {
+                case 1:
+                    { richTextBox1.Text += "Коллектив решил, что это М";
+                        break;
+                    }
+                case 2:
+                    {
+                        richTextBox1.Text += "Коллектив решил, что это А";
+                        break;
+                    }
+                case 3:
+                    {
+                        richTextBox1.Text += "Коллектив решил, что это И";
+                        break;
+                    }
+                default:
+                    {
+                        richTextBox1.Text += "Коллектив затрудняется ответить точно";
+                        break;
+                       
+                    }
+            }
             sec4 = delTime;
             timer4.Start();
         }
@@ -280,6 +353,8 @@ namespace Crew
         private void Form1_Load(object sender, EventArgs e)
         {
             delTime = 2;
+            boolString = new int[3] { 0, 0, 0 };
+            digitVec = new int[3] { 1, 2, 3 };
             width = pictureBox1.Width;
             height = pictureBox1.Height;
             pen = new Pen(new SolidBrush(Color.Black), 11);
