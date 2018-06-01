@@ -154,7 +154,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Готов";
             // 
             // button3
             // 
@@ -219,6 +219,7 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "Сохранить ";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -228,6 +229,7 @@
             this.button5.TabIndex = 3;
             this.button5.Text = "Ошибка";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -255,9 +257,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(212, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.label2.Text = "Готов ";
             // 
             // tabPage4
             // 
@@ -282,7 +284,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.label3.Text = "Готов";
             // 
             // button9
             // 
@@ -292,6 +294,7 @@
             this.button9.TabIndex = 3;
             this.button9.Text = "Сохранить";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -301,6 +304,7 @@
             this.button8.TabIndex = 2;
             this.button8.Text = "Ошибка";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

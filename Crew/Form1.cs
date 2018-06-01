@@ -122,6 +122,34 @@ namespace Crew
 
         private void button4_Click(object sender, EventArgs e)
         {
+            int[,] inp = new int[pictureBox2.Width, pictureBox2.Height];
+            for (int x = 0; x < pictureBox2.Width; x++)
+            {
+                for (int y = 0; y < pictureBox2.Height; y++)
+                {
+                    int n = (bmp2.GetPixel(x, y).R);
+                    if (n >= 250)
+                        n = 0;
+                    else
+                        n = 1;
+                    inp[x, y] = n;
+                }
+            }
+            NW2.input = inp;
+
+            //Распознавание
+            NW2.mul_w();
+            NW2.Sum();
+            if (NW2.Rez())
+            {
+                label2.Text = "ДА";
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Text = "НЕТ";
+                label2.Visible = true;
+            }
             sec2 = delTime;
             timer2.Start();
         }
@@ -141,8 +169,66 @@ namespace Crew
             NW1.saveWeight("w1.txt");
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NW2.saveWeight("w2.txt");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (!NW2.Rez())
+            {
+                NW2.incW();
+            }
+            else
+                NW2.decW();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            NW3.saveWeight("w3.txt");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (!NW3.Rez())
+            {
+                NW3.incW();
+            }
+            else
+                NW3.decW();
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
+            int[,] inp = new int[pictureBox3.Width, pictureBox3.Height];
+            for (int x = 0; x < pictureBox3.Width; x++)
+            {
+                for (int y = 0; y < pictureBox3.Height; y++)
+                {
+                    int n = (bmp3.GetPixel(x, y).R);
+                    if (n >= 250)
+                        n = 0;
+                    else
+                        n = 1;
+                    inp[x, y] = n;
+                }
+            }
+            NW3.input = inp;
+
+            //Распознавание
+            NW3.mul_w();
+            NW3.Sum();
+            if (NW3.Rez())
+            {
+                label3.Text = "ДА";
+                label3.Visible = true;
+            }
+            else
+            {
+                label3.Text = "НЕТ";
+                label3.Visible = true;
+            }
             sec3 = delTime;
             timer3.Start();
         }
@@ -212,8 +298,10 @@ namespace Crew
             pictureBox2.Image = bmp2;
             pictureBox3.Image = bmp3;
             pictureBox4.Image = bmp4;
+
             NW1 = new Web(width, height, "w1.txt");
-            
+            NW2 = new Web(width, height, "w2.txt");
+            NW3 = new Web(width, height, "w3.txt");
 
 
         }
