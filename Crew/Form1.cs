@@ -288,17 +288,17 @@ namespace Crew
             switch (sum)
             {
                 case 1:
-                    { richTextBox1.Text += "Коллектив решил, что это М";
+                    { richTextBox1.Text += "Коллектив решил, что это З";
                         break;
                     }
                 case 2:
                     {
-                        richTextBox1.Text += "Коллектив решил, что это А";
+                        richTextBox1.Text += "Коллектив решил, что это О";
                         break;
                     }
                 case 3:
                     {
-                        richTextBox1.Text += "Коллектив решил, что это И";
+                        richTextBox1.Text += "Коллектив решил, что это Ж";
                         break;
                     }
                 default:

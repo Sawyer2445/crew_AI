@@ -77,7 +77,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(330, 360);
+            this.tabControl1.Size = new System.Drawing.Size(333, 360);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -90,7 +90,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(322, 334);
+            this.tabPage1.Size = new System.Drawing.Size(325, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Коллектив";
             // 
@@ -101,7 +101,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 52);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Нарисуйте символ.\r\nКоллектив решит, \r\nчто это за символ \r\nиз трёх \'М\' \'А\' \'И\'";
+            this.label4.Text = "Нарисуйте символ.\r\nКоллектив решит, \r\nчто это за символ \r\nиз трёх \'З\' \'О\' \'Ж\'";
             // 
             // richTextBox1
             // 
@@ -144,7 +144,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(322, 334);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Перцептрон(М)";
+            this.tabPage2.Text = "Перцептрон(З)";
             // 
             // label1
             // 
@@ -209,7 +209,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(322, 334);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Перцептрон(А)";
+            this.tabPage3.Text = "Перцептрон(О)";
             // 
             // button6
             // 
@@ -274,7 +274,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(322, 334);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Перцептрон(И)";
+            this.tabPage4.Text = "Перцептрон(Ж)";
             // 
             // label3
             // 
@@ -350,7 +350,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 376);
+            this.ClientSize = new System.Drawing.Size(341, 376);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
